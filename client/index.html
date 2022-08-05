@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="main.css">
+  <script src="predictModel.js" charset="utf-8"></script>
+  <script src="calculateSimilarity.js" charset="utf-8"></script>
+  <script src="generateTables.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+</head>
+
+<body>
+  <section id="user-input-section">
+    <form class="form" method="get">
+      <h3>Paste your text here:</h3>
+      <textarea class="center" id="inputtext" name="inputtext" rows="8"
+        cols="80">The reform process of public finance is also reconstructed process of investment and financing system. This article views from the point of urban construction and development, analyzes the influence that the establishment of public finance system on the main body of investment and financing, modes of financing, financing structure, and analyzes how to make the urban investment operation management system perfect and strengthens financing vigor.</textarea>
+    </form>
+    </section>
+  <section id="result-filter-section">
+    <div class="slider-container">
+    <p>Drag this slider to determine the number of results returned. Higher limit = more precise. Lower limit = faster. Anything above 100,000 is not recommended (may cause crashes).</p>
+      <input type="range" min="1" max="100000" value="10000" class="slider" id="results-limit">
+      <p>Limit: <span id="results-limit-value"></span></p>
+    </div>
+    <input class="button center" type="submit" name="processtext" id="processtext" value="Continue">
+
+  </section>
+  <section id="results-table-section">
+    <p id="category-error">Error: could not derive any categories from the given text.</p>
+    <div class="center" id="page-select-buttons">
+      <button class="button center" type="button" id="lastPage" name="lastPage">Last Page</button>
+      <button class="button center" type="button" id="nextPage" name="nextPage">Next Page</button>
+    </div>
+      </section>
+  </body>
+
+</html>

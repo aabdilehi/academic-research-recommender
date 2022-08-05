@@ -1,0 +1,28 @@
+{
+  "name": "academic-literature-search-engine",
+  "version": "0.1.0",
+  "description": "Deliverable for my final year project. Very basic search engine that uses machine learning and natural language processing to retrieve academic literature from a database.",
+  "main": "server.js",
+  "dependencies": {
+    "better-sqlite3": "^7.1.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "start",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "text-similarity",
+    "text-classification",
+    "search-engine",
+    "ml",
+    "nlp"
+  ],
+  "author": "UP894248",
+  "license": "ISC"
+}
